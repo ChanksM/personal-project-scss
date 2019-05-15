@@ -1,0 +1,21 @@
+@mixin size-weight-line($font-size:inherit, $font-weight:inherit, $line-height:inherit) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+@mixin width-height($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex-direction-align-justify($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin border($color, $size:1px) {
+    border: $size solid $color;
+}

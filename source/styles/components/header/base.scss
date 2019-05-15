@@ -1,5 +1,49 @@
+@import '../../pallete.scss';
+@import '../../functions.scss';
+@import '../../mixins.scss';
+@import '../../reset.scss';
+
 .header {
+    display: flex;
     width: 100%;
-    height: 200px;
-    background: red;
+    height: 100px;
+    background: #000000;
+
+    .wrapper {
+        margin: auto;
+
+        @include flex-direction-align-justify(initial, center, space-between);
+        @include width-height(77%, 100%);
+
+        .logo {
+
+            &::after {
+                content: 'ARRY';
+                margin-left: -5px;
+                color: $white;
+                font-family: font-fam('Raleway');
+
+                @include size-weight-line(36px, 300);
+
+                letter-spacing: .5px;
+            }
+        }
+
+        nav {
+            width: 740px;
+            font-family: font-fam('Open sans');
+            font-size: 14px;
+
+            @include flex-direction-align-justify(initial, center, space-between);
+            @include size-weight-line(14px);
+
+            a {
+                color: $white;
+            }
+        }
+
+        .burger {
+            display: none;
+        }
+    }
 }

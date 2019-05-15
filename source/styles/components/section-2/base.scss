@@ -1,0 +1,168 @@
+@import '../../pallete.scss';
+@import '../../functions.scss';
+@import '../../mixins.scss';
+@import '../../reset.scss';
+
+.section-2 {
+    @include flex-direction-align-justify(initial, center, center);
+    @include width-height(100%, 810px);
+
+    .sect-2-wrapper {
+        @include width-height(77%, 575px);
+        @include flex-direction-align-justify(column, initial, space-between);
+
+        .sect-2-header {
+            font-family: font-fam('Raleway');
+
+            @include flex-direction-align-justify(column, center, center);
+
+            h1 {
+                margin-bottom: 15px;
+
+                @include size-weight-line(31px, 600, 31px);
+
+                span {
+                    color: $btn-1;
+                }
+            }
+
+            .icon-with-lines {
+                @include flex-direction-align-justify(initial, center, space-around);
+
+                img {
+                    margin: 0 10px;
+                }
+
+                &::before {
+                    content: '';
+                    background-color: $little-lines;
+
+                    @include width-height(30px, 1.1px);
+                }
+
+                &::after {
+                    content: '';
+                    background-color: $little-lines;
+
+                    @include width-height(30px, 1.1px);
+                }
+            }
+        }
+
+        .sect-2-content {
+            @include flex-direction-align-justify(initial, flex-start, space-between);
+
+            .sect-2-content-texts {
+                width: 580px;
+                height: 92.6%;
+                padding: 0 0 0 6px;
+
+                @include flex-direction-align-justify(column, initial, space-between);
+
+                .sect-2-content-texts-header {
+
+                    h2 {
+                        margin-bottom: 22px;
+                        color: $sect-2-h;
+                        font-family: font-fam('Raleway');
+                        letter-spacing: -.8px;
+
+                        @include size-weight-line(31px, 600, 31px);
+                    }
+
+                    p {
+                        color: $sect-2-p;
+                        font-family: font-fam('Open sans');
+
+                        @include size-weight-line(14px, 400, 27px);
+                    }
+                }
+
+                .sect-2-content-texts-items {
+                    display: grid;
+                    grid-column-gap: 35px;
+                    grid-row-gap: 50px;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+
+                    h4 {
+                        margin-bottom: 10px;
+                        color: $sect-2-h;
+                        font-family: font-fam('Raleway');
+                        letter-spacing: -.3px;
+
+                        @include size-weight-line(18px, 700, 22px);
+                    }
+
+                    p {
+                        color: $sect-2-p;
+                        font-family: font-fam('Open-sans');
+
+                        @include size-weight-line(13px, 400, 22px);
+                    }
+
+                    @include width-height(586px, 206px);
+
+                    @for $i from 1 through 4 {
+
+                        .sect-2-content-texts-item-#{$i} {
+                            @include flex-direction-align-justify(initial, flex-start, space-between);
+                        }
+                    }
+
+                    .sect-2-content-texts-item-1 {
+                        grid-column: 1 / 2;
+                        grid-row: 1 / 2;
+
+                        &.settings {
+
+                            &::before {
+                                content: url(/images/section-2/FEATURES-ONE.png);
+                                margin-right: 28px;
+                            }
+                        }
+                    }
+
+                    .sect-2-content-texts-item-2 {
+                        grid-column: 2 / 3;
+                        grid-row: 1 / 2;
+
+                        &.location {
+
+                            &::before {
+                                content: url(/images/section-2/FEATURES-TWO.png);
+                                margin-right: 28px;
+                            }
+                        }
+                    }
+
+                    .sect-2-content-texts-item-3 {
+                        grid-column: 1 / 2;
+                        grid-row: 2 / 3;
+
+                        &.heart {
+
+                            &::before {
+                                content: url(/images/section-2/FEATURES-THREE.png);
+                                margin-right: 28px;
+                            }
+                        }
+                    }
+
+                    .sect-2-content-texts-item-4 {
+                        grid-column: 2 / 3;
+                        grid-row: 2 / 3;
+
+                        &.write {
+
+                            &::before {
+                                content: url(/images/section-2/FEATURES-four.png);
+                                margin-right: 28px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,3 @@
+@function font-fam ($item) {
+    @return $item, sans-serif;
+}

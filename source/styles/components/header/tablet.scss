@@ -1,3 +1,14 @@
 .header {
-    background: green;
+    height: 108.92px;
+
+    .wrapper {
+
+        nav {
+            display: none;
+        }
+
+        .burger {
+            display: inherit;
+        }
+    }
 }
