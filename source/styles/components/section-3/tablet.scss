@@ -1,0 +1,29 @@
+@import '../../mixins.scss';
+
+.section-3 {
+    background-color: $black;
+
+    .sect-3-wrapper {
+        margin-bottom: 100px;
+
+        .sect-3-header {
+
+            h1 {
+                font-size: 28px;
+
+                &::after {
+                    background-color: $black;
+                }
+            }
+        }
+
+        .sect-3-content {
+            flex-direction: column;
+
+            .sect-3-content-item {
+                width: 45%;
+                margin-bottom: 70px;
+            }
+        }
+    }
+}

@@ -1,3 +1,30 @@
+@import '../../mixins.scss';
+
 .header {
-    background: yellow;
+
+    .wrapper {
+        width: 87%;
+        padding: 10px 0;
+
+        .logo {
+            font-size: 27px;
+
+            &::before {
+                height: 34px;
+            }
+        }
+
+        nav {
+            display: none;
+        }
+
+        .burger {
+            display: inherit;
+
+            img {
+                width: 49px;
+                height: 30px;
+            }
+        }
+    }
 }

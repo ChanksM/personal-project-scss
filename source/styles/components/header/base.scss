@@ -6,26 +6,27 @@
 .header {
     display: flex;
     width: 100%;
-    height: 100px;
     background: #000000;
 
     .wrapper {
         margin: auto;
+        padding: 26px 0;
 
         @include flex-direction-align-justify(initial, center, space-between);
         @include width-height(77%, 100%);
 
         .logo {
+            display: inline-block;
+            color: $white;
+            font-family: font-fam('Raleway');
 
-            &::after {
-                content: 'ARRY';
-                margin-left: -5px;
-                color: $white;
-                font-family: font-fam('Raleway');
+            @include size-weight-line(36px, 300);
 
-                @include size-weight-line(36px, 300);
+            letter-spacing: .5px;
 
-                letter-spacing: .5px;
+            &::before {
+                content: url(/images/header/logo.png);
+                margin-right: -10px;
             }
         }
 

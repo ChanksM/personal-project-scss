@@ -1,0 +1,104 @@
+@import '../../pallete.scss';
+@import '../../functions.scss';
+@import '../../mixins.scss';
+@import '../../reset.scss';
+
+.section-3 {
+    width: 100%;
+    height: 100%;
+    padding-top: 128px;
+    background-color: $section-3-bg;
+
+    .sect-3-wrapper {
+        width: 77%;
+        margin: auto;
+        margin-bottom: 152px;
+
+        @include flex-direction-align-justify(column, center, center);
+
+        .sect-3-header {
+            margin-bottom: 154px;
+
+            h1 {
+                position: relative;
+                color: $white;
+                font-family: font-fam('Raleway');
+
+                // @include flex-direction-align-justify(column, center, initial);
+                @include size-weight-line(31px, 600, 60px);
+
+                &::before {
+                    content: '';
+                    display: inherit;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: -2px;
+                    left: 50%;
+                    width: 110px;
+                    height: 1.1px;
+                    transform: translate(-50%);
+                    background-color: $little-lines;
+                }
+
+                &::after {
+                    content: url(/images/section-3/services.png);
+                    display: inherit;
+                    position: absolute;
+                    z-index: 2;
+                    left: 50%;
+                    width: 35px;
+                    height: 30px;
+                    transform: translate(-50%);
+                    background-color: $section-3-bg;
+
+                    @include flex-direction-align-justify(initial, flex-end, center);
+                }
+            }
+        }
+
+        .sect-3-content {
+            color: $white;
+            text-align: center;
+
+            @include flex-direction-align-justify(initial, center, space-between);
+
+            .sect-3-content-item {
+                width: 25%;
+
+                h4 {
+                    margin-bottom: 6px;
+                    color: $tablet-btn-bg;
+                    font-family: font-fam('Raleway');
+
+                    @include size-weight-line(20px, 700, 40px);
+                }
+
+                p {
+                    font-family: font-fam('Open sans');
+
+                    @include size-weight-line(14px, 400, 22px);
+                }
+
+                &::before {
+                    content: url(/images/section-3/service-1.png);
+                    display: block;
+                    margin-bottom: 30px;
+                }
+
+                &.visitors {
+
+                    &::before {
+                        content: url(/images/section-3/service-2.png);
+                    }
+                }
+
+                &.diagram {
+
+                    &::before {
+                        content: url(/images/section-3/service-3.png);
+                    }
+                }
+            }
+        }
+    }
+}

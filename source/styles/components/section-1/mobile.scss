@@ -1,3 +1,31 @@
-.header {
-    background: yellow;
+.section-1 {
+    height: 211px;
+
+    & > a {
+        display: none;
+    }
+
+    .sect-1-texts {
+
+        h1 {
+            font-size: 25px;
+            line-height: 25px;
+
+            span {
+                font-size: 30px;
+                line-height: 30px;
+            }
+        }
+
+        p {
+            font-size: 9px;
+            line-height: 9px;
+        }
+
+        a {
+            width: 64px;
+            height: 19px;
+            font-size: 7px;
+        }
+    }
 }

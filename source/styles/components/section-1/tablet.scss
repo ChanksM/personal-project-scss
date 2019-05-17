@@ -1,9 +1,10 @@
 @import '../../mixins.scss';
 
 .section-1 {
-    height: 593px;
+    height: 592px;
 
     .sect-1-texts {
+        width: 95%;
 
         h1 {
             @include size-weight-line(58px, 200, 70px);
@@ -16,5 +17,9 @@
         p {
             @include size-weight-line(18px, 200, 22px);
         }
+    }
+
+    & > a {
+        display: none;
     }
 }

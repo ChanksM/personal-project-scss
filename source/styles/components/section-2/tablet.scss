@@ -1,3 +1,100 @@
-.header {
-    background: green;
+@import '../../mixins.scss';
+@import '../../pallete.scss';
+
+.section-2 {
+
+    .sect-2-wrapper {
+        width: 93%;
+        margin: auto;
+        margin-bottom: 70px;
+
+        .sect-2-header {
+            margin-bottom: 40px;
+        }
+
+        .sect-2-content {
+            flex-direction: column;
+            align-items: center;
+
+            .sect-2-content-img {
+                margin-right: 0;
+                margin-bottom: 40px;
+            }
+
+            .sect-2-content-texts {
+                width: initial;
+                height: initial;
+
+                .sect-2-content-texts-header {
+                    margin-bottom: 40px;
+
+                    h2 {
+                        margin-bottom: 10px;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid $h2-border;
+                    }
+                }
+
+                .sect-2-content-texts-items {
+                    display: flex;
+                    flex-direction: column;
+                    height: initial;
+                    margin-bottom: 40px;
+
+                    // @for $i from 1 through 4 {
+
+                    //     .sect-2-content-texts-item-#{$i} {
+                    //         margin-bottom: 10px;
+
+                    //         h4 {
+                    //             display: none;
+                    //         }
+                    //     }
+                    // }
+
+                    .sect-2-content-texts-item {
+                        margin-bottom: 10px;
+
+                        &:last-child {
+                            display: none;
+                        }
+
+                        h4 {
+                            display: none;
+                        }
+
+                        &::before {
+                            content: url(/images/section-2/Check-Icon.png);
+                        }
+
+                        &.location {
+
+                            &::before {
+                                content: url(/images/section-2/Check-Icon.png);
+                            }
+                        }
+
+                        &.heart {
+
+                            &::before {
+                                content: url(/images/section-2/Check-Icon.png);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .sect-2-tablet-btn {
+            width: 138px;
+            height: 42px;
+            background-color: $tablet-btn-bg;
+            color: $white;
+            font-family: font-fam('Raleway');
+            text-transform: uppercase;
+
+            @include size-weight-line(13px, 700, 33px);
+            @include flex-direction-align-justify(initial, center, center);
+        }
+    }
 }
