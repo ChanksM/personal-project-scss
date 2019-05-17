@@ -3,8 +3,16 @@
 .section-1 {
     height: 592px;
 
+    .sect-1-bg-img {
+
+        img {
+            height: 592px;
+        }
+    }
+
     .sect-1-texts {
         width: 95%;
+        transform: translate(-50%, -59%);
 
         h1 {
             @include size-weight-line(58px, 200, 70px);

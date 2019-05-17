@@ -6,7 +6,7 @@
 .header {
     display: flex;
     width: 100%;
-    background: #000000;
+    background: $black;
 
     .wrapper {
         margin: auto;
@@ -26,7 +26,8 @@
 
             &::before {
                 content: url(/images/header/logo.png);
-                margin-right: -10px;
+                display: inline-block;
+                width: 20px;
             }
         }
 

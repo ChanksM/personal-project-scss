@@ -24,7 +24,6 @@
                 color: $white;
                 font-family: font-fam('Raleway');
 
-                // @include flex-direction-align-justify(column, center, initial);
                 @include size-weight-line(31px, 600, 60px);
 
                 &::before {
@@ -63,7 +62,10 @@
             @include flex-direction-align-justify(initial, center, space-between);
 
             .sect-3-content-item {
+                position: relative;
                 width: 25%;
+
+                @include flex-direction-align-justify(column, center, initial);
 
                 h4 {
                     margin-bottom: 6px;
@@ -80,22 +82,51 @@
                 }
 
                 &::before {
-                    content: url(/images/section-3/service-1.png);
+                    content: '';
                     display: block;
-                    margin-bottom: 30px;
+                    width: 136px;
+                    height: 163px;
+                    margin-bottom: 25px;
+                    background-image: url(/images/section-3/polygon.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                }
+
+                &:hover {
+
+                    &::before {
+                        background-image: url(/images/section-3/polygon.svg), url(/images/section-3/polygon-fill.svg);
+                        background-position: center, center;
+                        background-size: 92%;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 68px;
+                    right: 0;
+                    left: -4px;
+                    width: 28px;
+                    height: 26px;
+                    margin: 0 auto;
+                    background-image: url(/images/section-3/stat.svg);
+                    background-repeat: no-repeat;
                 }
 
                 &.visitors {
 
-                    &::before {
-                        content: url(/images/section-3/service-2.png);
+                    &::after {
+                        background-image: url(/images/section-3/visitors.svg);
                     }
                 }
 
                 &.diagram {
 
-                    &::before {
-                        content: url(/images/section-3/service-3.png);
+                    &::after {
+                        background-image: url(/images/section-3/sales.svg);
                     }
                 }
             }

@@ -1,3 +1,22 @@
 .section-2 {
+    padding-top: 7.4%;
 
+    .sect-2-wrapper {
+
+        .sect-2-content {
+
+            .sect-2-content-img {
+                margin-right: 6.6%;
+            }
+
+            .sect-2-content-texts {
+                padding: 0 0 0 10px;
+
+                .sect-2-content-texts-items {
+                    grid-column-gap: 57px;
+                    grid-row-gap: 43px;
+                }
+            }
+        }
+    }
 }
