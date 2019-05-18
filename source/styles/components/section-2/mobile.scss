@@ -73,17 +73,15 @@
                             content: url(/images/section-2/check-icon.png);
                         }
 
-                        &.location {
+                        $array: location, heart;
 
-                            &::before {
-                                content: url(/images/section-2/check-icon.png);
-                            }
-                        }
+                        @each $class in $array {
 
-                        &.heart {
+                            &.#{$class} {
 
-                            &::before {
-                                content: url(/images/section-2/check-icon.png);
+                                &::before {
+                                    content: url(/images/section-2/check-icon.png);
+                                }
                             }
                         }
                     }

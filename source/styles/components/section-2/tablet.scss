@@ -52,17 +52,6 @@
                     height: initial;
                     margin-bottom: 40px;
 
-                    // @for $i from 1 through 4 {
-
-                    //     .sect-2-content-texts-item-#{$i} {
-                    //         margin-bottom: 10px;
-
-                    //         h4 {
-                    //             display: none;
-                    //         }
-                    //     }
-                    // }
-
                     .sect-2-content-texts-item {
                         margin-bottom: 10px;
 
@@ -75,20 +64,18 @@
                         }
 
                         &::before {
-                            content: url(/images/section-2/Check-Icon.png);
+                            content: url(/images/section-2/check-icon.png);
                         }
 
-                        &.location {
+                        $array: location, heart;
 
-                            &::before {
-                                content: url(/images/section-2/Check-Icon.png);
-                            }
-                        }
+                        @each $class in $array {
 
-                        &.heart {
+                            &.#{$class} {
 
-                            &::before {
-                                content: url(/images/section-2/Check-Icon.png);
+                                &::before {
+                                    content: url(/images/section-2/check-icon.png);
+                                }
                             }
                         }
                     }
