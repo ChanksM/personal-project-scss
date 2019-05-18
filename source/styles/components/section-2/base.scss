@@ -38,18 +38,16 @@
                     margin: 0 10px;
                 }
 
-                &::before {
-                    content: '';
-                    background-color: $little-lines;
+                $ba: before, after;
 
-                    @include width-height(30px, 1.1px);
-                }
+                @each $element in $ba {
 
-                &::after {
-                    content: '';
-                    background-color: $little-lines;
+                    &::#{$element} {
+                        content: '';
+                        background-color: $little-lines;
 
-                    @include width-height(30px, 1.1px);
+                        @include width-height(30px, 1.1px);
+                    }
                 }
             }
         }
@@ -116,13 +114,6 @@
                     }
 
                     @include width-height(586px, 206px);
-
-                    // @for $i from 1 through 4 {
-
-                    //     .sect-2-content-texts-item-#{$i} {
-                    //         @include flex-direction-align-justify(initial, flex-start, flex-start);
-                    //     }
-                    // }
 
                     .sect-2-content-texts-item {
                         @include flex-direction-align-justify(initial, flex-start, flex-start);
