@@ -123,27 +123,15 @@
                             margin-right: 28px;
                         }
 
-                        &.location {
+                        $array: (location: two, heart: three, write: four);
 
-                            &::before {
-                                content: url(/images/section-2/features-two.png);
-                                margin-right: 28px;
-                            }
-                        }
+                        @each $class, $num in $array {
 
-                        &.heart {
+                            &.#{$class} {
 
-                            &::before {
-                                content: url(/images/section-2/features-three.png);
-                                margin-right: 28px;
-                            }
-                        }
-
-                        &.write {
-
-                            &::before {
-                                content: url(/images/section-2/features-four.png);
-                                margin-right: 28px;
+                                &::before {
+                                    content: url(/images/section-2/features-#{$num}.png);
+                                }
                             }
                         }
                     }
